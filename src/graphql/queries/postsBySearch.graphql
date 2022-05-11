@@ -1,0 +1,8 @@
+query PostsBySearch($limit: Int!, $cursor: String, $searchText: String!) {
+  postsBySearch(limit: $limit, cursor: $cursor, searchText: $searchText) {
+    posts {
+      ...PostFragment
+    }
+    hasMore
+  }
+}

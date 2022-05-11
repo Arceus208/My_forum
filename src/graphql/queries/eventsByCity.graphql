@@ -1,0 +1,12 @@
+query GetEventsByCity($city: String!) {
+  getEventsByCity(city: $city) {
+    events {
+      ...EventFragment
+    }
+    coordinates {
+      lat
+      long
+    }
+    error
+  }
+}

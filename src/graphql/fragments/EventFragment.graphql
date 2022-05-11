@@ -1,0 +1,12 @@
+fragment EventFragment on Event {
+  id
+  name
+  location
+  description
+  latitude
+  longitude
+  eventDate
+  eventTime
+  hostName
+  image
+}

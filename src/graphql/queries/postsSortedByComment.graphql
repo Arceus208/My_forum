@@ -1,0 +1,13 @@
+query SortedByCommentAmount($limit: Int!) {
+  sortedByCommentAmount(limit: $limit) {
+    posts {
+      id
+      title
+      creator {
+        image
+        username
+      }
+    }
+    hasMore
+  }
+}

@@ -1,0 +1,27 @@
+mutation CreateEvent(
+  $name: String!
+  $location: String!
+  $description: String!
+  $eventDate: String!
+  $eventTime: String!
+  $file: Upload
+) {
+  createEvent(
+    name: $name
+    location: $location
+    description: $description
+    eventDate: $eventDate
+    eventTime: $eventTime
+    file: $file
+  ) {
+    event {
+      id
+      name
+      location
+    }
+    errors {
+      field
+      message
+    }
+  }
+}
